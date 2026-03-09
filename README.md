@@ -203,7 +203,7 @@ All projects are fully responsive across all devices:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/internship-tasks.git
+   git clone https://github.com/chizhinime/internship-tasks.git
    cd internship-tasks
    ```
 
