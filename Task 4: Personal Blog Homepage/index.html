@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBlog - Personal Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <i class="fa-solid fa-pen-fancy"></i>
+                        <span>DevBlog</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="search-toggle" id="searchToggle">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Search Bar (Hidden by default) -->
+            <div class="search-bar" id="searchBar">
+                <input type="text" id="searchInput" placeholder="Search articles...">
+                <button id="searchBtn">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to <span class="gradient-text">DevBlog</span></h1>
+                <p>Thoughts, stories, and ideas about web development, design, and technology.</p>
+                
+                <!-- Category Pills -->
+                <div class="hero-categories">
+                    <span class="category-pill active" data-category="all">All Posts</span>
+                    <span class="category-pill" data-category="tech">Tech</span>
+                    <span class="category-pill" data-category="travel">Travel</span>
+                    <span class="category-pill" data-category="food">Food</span>
+                    <span class="category-pill" data-category="lifestyle">Lifestyle</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="featured-posts">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="gradient-text">Stories</span></h2>
+            
+            <div class="featured-grid">
+                <!-- Featured Post 1 -->
+                <article class="featured-card" data-category="tech">
+                    <div class="featured-image">
+                        <img src="https://placehold.co/600x400/2563EB/white?text=React+19+Features" alt="React 19 Features">
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <span class="post-category">Tech</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Mar 15, 2026</span>
+                        </div>
+                        <h3>What's New in React 19: A Comprehensive Guide</h3>
+                        <p>Explore the exciting new features in React 19 including the new compiler, server components, and improved performance.</p>
+                        <a href="#" class="read-more">
+                            Read Article <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Featured Post 2 -->
+                <article class="featured-card" data-category="travel">
+                    <div class="featured-image">
+                        <img src="https://placehold.co/600x400/10B981/white?text=Digital+Nomad+Guide" alt="Digital Nomad">
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <span class="post-category">Travel</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Mar 12, 2026</span>
+                        </div>
+                        <h3>Digital Nomad Guide: Working from Paradise</h3>
+                        <p>How to balance work and travel while maintaining productivity and exploring the world.</p>
+                        <a href="#" class="read-more">
+                            Read Article <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="blog" class="blog-posts">
+        <div class="container">
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="tech">Technology</button>
+                <button class="filter-btn" data-filter="travel">Travel</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+                <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+            </div>
+
+            <!-- Posts Grid -->
+            <div class="posts-grid" id="postsGrid">
+                <!-- Post 1 -->
+                <article class="post-card" data-category="tech" data-title="Understanding JavaScript Closures" data-date="2026-03-10">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/2563EB/white?text=JavaScript" alt="JavaScript">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Tech</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Mar 10, 2026</span>
+                        </div>
+                        <h3>Understanding JavaScript Closures</h3>
+                        <p>Deep dive into closures, lexical scoping, and practical examples you can use today.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post-card" data-category="food" data-title="10 Easy Pasta Recipes" data-date="2026-03-08">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/EF4444/white?text=Pasta+Recipes" alt="Pasta">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Food</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Mar 8, 2026</span>
+                        </div>
+                        <h3>10 Easy Pasta Recipes for Busy Developers</h3>
+                        <p>Quick, delicious pasta dishes you can make in under 30 minutes after a long coding session.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 8 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post-card" data-category="travel" data-title="Bali Digital Nomad Guide" data-date="2026-03-05">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/8B5CF6/white?text=Bali" alt="Bali">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Travel</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Mar 5, 2026</span>
+                        </div>
+                        <h3>Bali: The Ultimate Digital Nomad Destination</h3>
+                        <p>Everything you need to know about working from Bali - cafes, coworking spaces, and culture.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 10 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="post-card" data-category="tech" data-title="CSS Grid Masterclass" data-date="2026-03-03">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/2563EB/white?text=CSS+Grid" alt="CSS Grid">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Tech</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Mar 3, 2026</span>
+                        </div>
+                        <h3>CSS Grid Masterclass: From Beginner to Pro</h3>
+                        <p>Master CSS Grid with practical examples and real-world layouts you can use in your projects.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 7 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="post-card" data-category="lifestyle" data-title="Morning Routine for Developers" data-date="2026-02-28">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/EC4899/white?text=Morning+Routine" alt="Morning Routine">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Lifestyle</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Feb 28, 2026</span>
+                        </div>
+                        <h3>Optimize Your Morning Routine for Coding</h3>
+                        <p>How successful developers start their day for maximum productivity and focus.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 6 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 6 -->
+                <article class="post-card" data-category="food" data-title="Meal Prep for Coders" data-date="2026-02-25">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/EF4444/white?text=Meal+Prep" alt="Meal Prep">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Food</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Feb 25, 2026</span>
+                        </div>
+                        <h3>Healthy Meal Prep for Busy Developers</h3>
+                        <p>Save time and eat healthy with these meal prep strategies designed for coders.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 6 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 7 -->
+                <article class="post-card" data-category="tech" data-title="VS Code Extensions" data-date="2026-02-22">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/2563EB/white?text=VS+Code" alt="VS Code">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Tech</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Feb 22, 2026</span>
+                        </div>
+                        <h3>10 VS Code Extensions That Will Boost Your Productivity</h3>
+                        <p>Essential extensions every developer should install for a better coding experience.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 8 -->
+                <article class="post-card" data-category="travel" data-title="Portugal Digital Nomad Visa" data-date="2026-02-20">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/8B5CF6/white?text=Portugal" alt="Portugal">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Travel</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Feb 20, 2026</span>
+                        </div>
+                        <h3>How to Get the Portugal Digital Nomad Visa</h3>
+                        <p>Complete guide to requirements, application process, and living in Portugal as a remote worker.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 12 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 9 -->
+                <article class="post-card" data-category="lifestyle" data-title="Work-Life Balance" data-date="2026-02-18">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/EC4899/white?text=Work-Life+Balance" alt="Work-Life Balance">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Lifestyle</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Feb 18, 2026</span>
+                        </div>
+                        <h3>Maintaining Work-Life Balance as a Remote Developer</h3>
+                        <p>Practical tips to avoid burnout and maintain healthy boundaries while working from home.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 7 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 10 -->
+                <article class="post-card" data-category="food" data-title="Coffee Guide for Coders" data-date="2026-02-15">
+                    <div class="post-image">
+                        <img src="https://placehold.co/400x250/EF4444/white?text=Coffee" alt="Coffee">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Food</span>
+                            <span class="post-date"><i class="fa-regular fa-calendar"></i> Feb 15, 2026</span>
+                        </div>
+                        <h3>The Ultimate Coffee Guide for Developers</h3>
+                        <p>From bean to cup - how to brew the perfect coffee during your coding sessions.</p>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fa-regular fa-clock"></i> 8 min read</span>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Never Miss a Post</h2>
+                <p>Subscribe to get the latest articles delivered straight to your inbox.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">
+                        Subscribe <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-pen-fancy"></i>
+                        <span>DevBlog</span>
+                    </div>
+                    <p>Sharing knowledge and experiences about web development, design, and the digital nomad lifestyle.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-dev"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Lifestyle</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-regular fa-envelope"></i> hello@devblog.com</li>
+                        <li><i class="fa-brands fa-twitter"></i> @devblog</li>
+                        <li><i class="fa-regular fa-clock"></i> Response within 24h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DevBlog. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
