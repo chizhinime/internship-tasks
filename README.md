@@ -335,7 +335,7 @@ This project is created for educational purposes as part of a front-end developm
 
 ## 📬 Contact
 
-**Chijioke Chizhinime** - [@yourtwitter](https://twitter.com/ChizhinimeC) - chizhimchijioke@gmail.com
+**Chijioke Chizhinime** - [@ChizhinimeC](https://twitter.com/ChizhinimeC) - chizhimchijioke@gmail.com
 
 Project Link: [https://github.com/chizhinime/internship-tasks](https://github.com/chizhinime/internship-tasks)
 
