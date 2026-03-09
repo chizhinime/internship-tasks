@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Sidebar | Task 1</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Logo Area -->
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fa-solid fa-tasks"></i>
+                <span class="logo-text">TaskFlow</span>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item active">
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fa-solid fa-folder"></i>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span class="nav-text">Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span class="nav-text">Schedule</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- User Profile (Optional - adds professionalism) -->
+        <div class="user-profile">
+            <img src="https://ui-avatars.com/api/?name=John+Doe&background=2563EB&color=fff" alt="User">
+            <div class="user-info">
+                <span class="user-name">John Doe</span>
+                <span class="user-role">Admin</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header with Toggle Button -->
+        <header class="header">
+            <button class="toggle-btn" id="toggleBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <h1>Dashboard Overview</h1>
+        </header>
+
+        <!-- Page Content -->
+        <div class="content">
+            <div class="card">
+                <h2>Welcome to TaskFlow</h2>
+                <p>This is your professional dashboard. The sidebar is fully responsive with smooth animations.</p>
+            </div>
+            
+            <!-- Sample content to show layout -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <div>
+                        <h3>12</h3>
+                        <p>Active Projects</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h3>8</h3>
+                        <p>Pending Tasks</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-users"></i>
+                    <div>
+                        <h3>24</h3>
+                        <p>Team Members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
